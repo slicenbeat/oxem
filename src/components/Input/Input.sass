@@ -1,5 +1,8 @@
 
 $orange-color: #FF9514
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
 
 .search-block
     width: 280px
@@ -71,12 +74,13 @@ $orange-color: #FF9514
         left: 18px
         background: transparent
         -webkit-appearance: none
-
         &:focus
             outline: none
         &::-moz-range-progress
             background: $orange-color
             height: 2px
+            &:disabled
+                background: #ffd5a1
         &::-moz-range-track
             height: 2px
             background: #E1E1E1
@@ -89,7 +93,6 @@ $orange-color: #FF9514
             left: 0
             height: 2px
             background: #E1E1E1
-
             border: none
             border-radius: 3px
         &::-moz-range-thumb
@@ -98,6 +101,8 @@ $orange-color: #FF9514
             width: 20px
             border-radius: 50%
             background: $orange-color
+            &:disabled
+                background: #ffd5a1
         &::-webkit-slider-thumb
             position: relative
             top: -9px
@@ -107,6 +112,8 @@ $orange-color: #FF9514
             width: 20px
             border-radius: 50%
             background: $orange-color
+            &:disabled
+                background: #ffd5a1
 @media screen and (min-width: 768px)
     .search-block
         width: 696px
@@ -114,6 +121,8 @@ $orange-color: #FF9514
             width: 696px
         &__range-input
             width: 648px
+            &::-webkit-slider-runnable-track
+                width: 648px
 @media screen and (min-width: 1024px)
     .search-block
         width: 928px
@@ -141,6 +150,8 @@ $orange-color: #FF9514
             width: 880px
             top: 57px
             left: 18px
+            &::-webkit-slider-runnable-track
+                width: 880px
 
 @media screen and (min-width: 1440px)
     .search-block
@@ -186,3 +197,5 @@ $orange-color: #FF9514
             width: 379px
             top: 81px
             left: 18px
+            &::-webkit-slider-runnable-track
+                width: 379px

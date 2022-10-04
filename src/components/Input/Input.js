@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Input.sass";
 import { NumericFormat } from "react-number-format";
-import { Range } from "react-range";
+
 const Input = (props) => {
   const [amount, setAmount] = useState(props.startAmount);
   const [percent, setPercent] = useState(props.startPercent);
   const [month, setMonth] = useState(props.startMonth);
   const [contribution, setContribution] = useState(0);
-
   const updateContribution = (percent) => {
     const tempContribution = (percent * props.currentAmount) / 100;
     setContribution(tempContribution);
@@ -30,6 +29,7 @@ const Input = (props) => {
               className={`search-block__main-input-wrapper search-block__main-input-wrapper_${props.unit}`}
             >
               <input
+                disabled={props.flagBlock}
                 className={`search-block__main-input`}
                 type={"number"}
                 step={1}
@@ -39,6 +39,7 @@ const Input = (props) => {
                 }}
               />
               <NumericFormat
+                disabled={props.flagBlock}
                 className={`search-block__option-input_percent`}
                 value={percent}
                 suffix={"%"}
@@ -59,6 +60,7 @@ const Input = (props) => {
               />
             </div>
             <NumericFormat
+              disabled={props.flagBlock}
               className={`search-block__range-input styled-slider slider-progress`}
               type={"range"}
               min={props.min}
@@ -82,6 +84,7 @@ const Input = (props) => {
               className={`search-block__main-input-wrapper search-block__main-input-wrapper_${props.unit}`}
             >
               <NumericFormat
+                disabled={props.flagBlock}
                 className={`search-block__main-input`}
                 type={"number"}
                 value={amount}
@@ -103,7 +106,8 @@ const Input = (props) => {
               />
             </div>
 
-            <NumericFormat 
+            <NumericFormat
+              disabled={props.flagBlock}
               min={props.min}
               max={props.max}
               value={amount}
@@ -146,9 +150,9 @@ const Input = (props) => {
                     props.handleMonth(month);
                   }
                 }}
+                disabled={props.flagBlock}
               />
             </div>
-
             <NumericFormat
               className={`search-block__range-input styled-slider slider-progress`}
               type={"range"}
@@ -160,6 +164,7 @@ const Input = (props) => {
               min={props.min}
               max={props.max}
               step={1}
+              disabled={props.flagBlock}
             />
           </div>
         </div>

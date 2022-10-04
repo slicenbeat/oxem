@@ -71,6 +71,7 @@ function App() {
           min={1000000}
           max={6000000}
           handleAmount={setCurrentAmount}
+          flagBlock={flag}
         ></Input>
         <Input
           label={`Первоначальный взнос`}
@@ -81,6 +82,7 @@ function App() {
           max={60}
           currentAmount={currentAmount}
           handleContribution={setCurrentContribution}
+          flagBlock={flag}
         ></Input>
         <Input
           label={`Срок лизинга`}
@@ -89,6 +91,7 @@ function App() {
           min={1}
           max={60}
           handleMonth={setCurrentMonth}
+          flagBlock={flag}
         ></Input>
       </div>
       <div className="prices-wrapper">
