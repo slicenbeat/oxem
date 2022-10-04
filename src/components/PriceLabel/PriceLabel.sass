@@ -1,0 +1,27 @@
+.price-label
+    align-self: flex-start
+    font-family: "Gilroy-Regular"
+    font-size: 14px
+    line-height: 136%
+    width: 167px
+    height: 41px
+    &:nth-child(1)
+        margin-top: 16px
+    &:nth-child(2)
+        margin-top: 29px
+    &__label, &__price
+        color: #333333
+    &__price
+        margin-top: 2px
+        font-size: 22px
+        font-family: "Nekst-Black"
+@media screen and (min-width: 768px)
+    .price-label
+        width: 341px
+        height: 81px
+        &:nth-child(1), &:nth-child(2)
+            margin-top: 0px
+        &__price
+            margin-top: 8px
+            font-size: 54px
+            line-height: 90%
