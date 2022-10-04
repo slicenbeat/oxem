@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/oxem/static/css/main.de64247d.css",
+    "main.js": "/oxem/static/js/main.9e18c5c3.js",
+    "static/media/Nekst-Black.woff2": "/oxem/static/media/Nekst-Black.44814bfd3ba4a266cf1d.woff2",
+    "static/media/Gilroy-Regular.woff2": "/oxem/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "index.html": "/oxem/index.html",
+    "main.de64247d.css.map": "/oxem/static/css/main.de64247d.css.map",
+    "main.9e18c5c3.js.map": "/oxem/static/js/main.9e18c5c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de64247d.css",
+    "static/js/main.9e18c5c3.js"
+  ]
+}
